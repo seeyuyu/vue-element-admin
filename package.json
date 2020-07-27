@@ -11,9 +11,14 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "build:prod": "NODE_ENV=production node build/build.js",
+    "build:sit": "NODE_ENV=sit node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mockjs": "^1.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

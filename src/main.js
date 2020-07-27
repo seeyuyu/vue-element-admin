@@ -3,7 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+// import { mockXHR } from '../mock'
+// require('../mock')
 
+if (process.env.NODE_ENV === 'production') {
+  const { mockXHR } = require('../mock')
+  console.log('生产')
+  mockXHR()
+}
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
