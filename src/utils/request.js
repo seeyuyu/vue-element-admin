@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import router from '../../router'
+import { debug } from 'webpack'
 // import router from '@/router'
 
 // 创建axios实例
@@ -35,7 +36,7 @@ service.interceptors.request.use(config => {
   // Do something with request error
   return Promise.reject(error)
 })
-
+debugger
 // response拦截器
 service.interceptors.response.use(response => {
   return response
